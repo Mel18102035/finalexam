@@ -1,0 +1,26 @@
+body{
+  margin: 90px;
+  padding: 20px;
+ 
+  background-image: url(bg.jpg);
+}
+
+.Registration{
+  text-align: center;
+}
+form{ 
+  background-color: #faf3dd;
+  border: solid;
+  margin: 20px;
+  width: 500px;
+ }
+.reg-form{
+ margin-top: 50px;
+}
+
+.btn input{
+  background-color: #d2f6c5;
+  font-size: 13px;
+}
+
+        

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <div class="Registration">
+<form action="" id="myform" onsubmit = "return registration();">
+ <h1> REGISTRATION FORM </h1>
+    <h2> All fields are mandatory. </h2>
+
+<div class="reg-form">
+ <div class="form-group">
+ <label for="firstname"> First Name</label><br>
+    <input type="text" class="form-control" id="fname">
+  </div>
+
+<div class="form-group">
+ <label for="middlename"> Middle Name</label><br>
+    <input type="text" class="form-control" id="mname">
+  </div>
+
+<div class="form-group">
+ <label for="lasttname"> Last Name</label><br>
+    <input type="text" class="form-control" id="lname">
+  </div>
+<div class="form-group">
+ <label for="firstname"> Phone </label><br>
+    <input type="text" class="form-control" id="phone">
+  </div>
+<div class="form-group">
+ <label for="firstname"> Email </label><br>
+    <input type="text" class="form-control" id="email">
+  </div>
+
+<div class="form-group">
+ <label for="firstname"> Username </label><br>
+    <input type="text" class="form-control" id="user">
+  </div>
+
+<div class="form-group">
+ <label for="firstname"> Password </label><br>
+    <input type="text" class="form-control" id="pass">
+  </div>
+
+  <div class="form-group">
+ <label for="firstname"> Confirm Password </label><br>
+    <input type="text" class="form-control" id="conpass">
+  </div> 
+<br>
+    <div class="btn">
+        <input type="submit" value = "Register"> <br><br>
+        
+    </div>
+  </form>
+</div>
+</div>
+<script>
+
+ function registration(){
+
+  var fname = document.getElementById("fname").value;
+  var mname = document.getElementById("mname").value;
+  var lname = document.getElementById("lname").value;
+  
+  var phone = document.getElementById("phone").value;
+  var email = document.getElementById("email").value;
+  var user = document.getElementById("user").value;
+  var pass = document.getElementById("pass").value;
+  var conpass = document.getElementById("conpass").value;
+  
+/* conditions */
+
+  if(fname.length < 5){
+    alert("Please Enter valid first Name");
+    return false;
+  }
+  if(mname.length < 5){
+    alert("Please Enter valid middle Name");
+    return false;
+  }
+  if(lname.length < 5){
+    alert("Please Enter valid last Name");
+    
+    return false;
+  }
+  
+  if(phone.length != 11){
+    alert("Please Enter correct phone number");
+    return false;
+  }
+  if(email.indexOf("@") == -1 || email.length < 5){
+    alert("Please Enter correct email");
+    return false;
+  }
+    if(user.length < 5){
+    alert("username should not be less than 5 characters");
+    return false;
+  }
+  if(pass.length < 5){
+    alert("password should not be less than 5 characters");
+    return false;
+  }
+  if(pass != conpass){
+    alert("Password should match");
+    return false;
+  }
+
+  document.write("Sucessfully submitted, ");
+  return true;
+  
+}
+    </script>
+</body>
+</html>
